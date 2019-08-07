@@ -1,0 +1,43 @@
+登陆：一个本地仓库可以同时连接不同账号的远程仓库
+$ git config --global user.name "Your Name"（注意前边是“- -global”，有两个横线）
+$ git config --global user.email "email@example.com"
+
+
+查看当前位置
+$ pwd
+
+回退
+$ cd ..
+
+新建文件夹
+$ mkdir +文件夹名字
+
+删除文件
+$ rm 文件名.文件类型一定要输入类型啊
+
+进入到你想建立本地仓库的文件夹，比如我的D:\github\Lolita。起初我这个Lolita文件夹是空的，并且不是本地仓库
+把它变成本地仓库
+$ git init
+
+添加文件
+$ git add+文件名.文件类型
+
+添加了很多文件，如果一个一个add肯定会累死，所以：
+git add -A 提交所有变化
+git add -u 提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+git add . 提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+--------------------- 
+
+修改之后就可以提交了。 在git Bash中输入命令行即可。
+$ git commit -m "修改注释"
+
+查看修改了什么
+$ git diff 文件名+类型
+
+查看文件类容
+$ cat 文件名
+
+
+如何克隆一个远程仓库---SSH链接，参考github SSH配置
+$ git clone git@github.com:Dcivan226/gitBash.git
+
